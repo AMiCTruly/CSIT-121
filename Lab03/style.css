@@ -1,0 +1,38 @@
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5 {
+    color: #0056b3;
+}
+
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+a {
+    color: #d63384;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+#highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
+.special-text {
+    font-style: italic;
+    color: #ff5733;
+}
