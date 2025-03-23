@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="style.css" >
+    <link id="theme-style" rel="stylesheet" href="flexbox_orange.css"> 
+    <script>
+        function switchTheme(theme) {
+            document.getElementById("theme-style").href = theme;
+        }
+    </script>
     <title>Lab 05 - Learning Web Standards But this time with a Twist😭</title>
-    
+
 </head>
 
 <body>
-
     <header>
         <h1>The Learning of Web Standards | But this time with a Twist😭</h1>
         <h2>Lab 05</h2>
         <p><em>Published on February 22, 2025 by Micheal A.</em></p>
         <p><em>Edited on March 14th, 2025</em></p>
     </header>
+    <div style="text-align: center; margin: 20px;"></div>
+        <button onclick="switchTheme('flexbox_itsorange.css')">Flexbox (Orange)</button>
+        <button onclick="switchTheme('grid_blue.css')">Grid (Blue)</button>
+        <button onclick="switchTheme('purplethistimearound.css')"> Minimalist (Purple)</button>
 
     <nav>
         <ul> 
-            <li><a href="#post1"> What was Learned?</a></li>
+            <li><a href="#post1"> What was Learned? </a></li>
             <li><a href="#post2"> Additional Lessons Learned</a></li>
-            <li><a href="#post3"> Best Desgin Practices</a></li>
+            <li><a href="#post3"> Best Desgin Practices (Lab05)</a></li>
             <li><a href="#post4"> A Little More About Me</a></li>
             <li><a href="#post5"> References</a></li>
             <li><a href="#post6"> Additional References</a></li>
+            
         </ul>
     </nav>
     <main class="container">
-        <article id:="post1">
+        <article id="post1">
             <h3>What Was Learned?</h3>
             <p><em>This goes over what I enjoyed learning in this module.</em></p>
             <p>I enjoyed the process of learning how to use tags. At first, it looked (slightly) daunting. I originally thought 
@@ -43,7 +52,7 @@
                 <li>And so much <strong>more!</strong></li>
             </ol>
         </article>
-        <article id: = "post2">            
+        <article id= "post2">            
             <h3>Additional Lessons Learned (Lab03)</h3>
             <ol>
                 <li><p class="special-text">Lab 03 was a little different from what I expected. 
@@ -65,8 +74,19 @@
         </article>
 
         <article id="post3">
-            <h3> Best Design Practices</h3>
-    So uh yea this is a work in progress stay tuned for more information coming your way in the coming days hopefully it will work out, please I am tired.
+            <h3> Best Design Practices | Yap (Lab05)</h3>
+               
+            <p>When we were tasked with making our html page look <i>pretty</i> all I could think about was what colors to use for them. Automatically I thought, <code> I should do it like how I did lab04 and didn't think to hard about it</code> and because of that mindset I was running with,  I missed an incredibly vital tool. 
+                <strong>JAVASCRIPT</strong> making the 3 seperate htmls wasn't too hard because when I was done with one I copied and pasted the rest which made things simpliar than I thought. But, it began to become tedious and thats when I knew something was wrong but I didn't want to work on it anymore for that day. 
+                So I wanted to work on the visually aspect of the webpage. All I knew was I wanted the colors to be <strong> Purple, Orange, and Blue</strong>, but I also wanted the webpage to be appealing and functional but,  little did I know it wasn't going to be easy. In lab04 we just had to slap some colors together as practice to make a webpage <i>somewhat</i> appealing. 
+                This time around I actually wanted the webpage to look appeal for myself and others. The color scheme was the easiest part, but having some sort of sense for design is something I know I have but implementing is difficult. I needed to know about some principles like contrast and readability. Initially, the color scheme was decided on. 
+                But figuring out how to balance <strong>orange, blue, and purple</strong> without making the site look like a chaotic mix of well... chaos. That’s when I turned to AI, asking for guidance on how to implement three distinct themes while keeping them easy on the eyes.</p>
+            <p>With the help of AI, I learned how to structure <i><strong>Flexbox for the orange theme,Grid for the blue theme, and a minimalist purple theme</strong></i> using clean and simple design elements,like the banner/bar behind the references that you can click to. That was by far the best implementation to the whole webpage. It gave it way more definition. Imagine it like drawing a ball, you can draw and color the ball and it might look alright, but adding shadow below it just gives it so much more definition.
+                The goal was to make each theme feel unique but still keep everything looking simple, professional, and modern.<strong>Orange</strong> had to feel warm and energetic, but not overwhelming (was good enough for me). 
+                <strong>Blue</strong> needed to give off a serious look/vibe. guy in a blue suit with a suitcase type of vibe . <strong>Purple</strong>, this by far is my second favorite as it just looks nice, and No I dont have an artsy way of conveying what I was going for just wanted it to look nice. The text always being readable was the second most important aspect of the design process.</p>
+            <p>By the end, what started as a simple idea and a bare bone page 💀 became a good looking webpage. The relief I felt when I saw the webpages were switching themes as they were supposed to brought so much joy to me. Looking back, using AI to refine ideas, tweak colors, and understand layout techniques made the entire process much more **structured and intentional**—rather than just randomly picking colors and hoping for the best. 
+                Now, when someone switches between <code><i>Flexbox (Orange), Grid (Blue), and Minimalist (Purple)</i></code>, they should see <strong>THE BEAUTY THE AWESOME POWER OF DESIGN</strong> that they already know about</p>
+        
     
     
         </article>
@@ -78,7 +98,7 @@
                 <li><a href="mailto:ag1132126@email.ccbcmd.edu">Shoot an email if you want... (I mean, why not?)</a></li>
             </ul>
         </article>
-        <article id="#post5">
+        <article id="post5">
             <h4>References</h4>
             <ul>
                 <li><a href="https://www.w3schools.com/tags/tag_code.asp">W3Schools for the tag "code"</a></li>
@@ -93,6 +113,15 @@
                 <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page">Reference for my CSS</a></li>
                 <li><a href="https://www.w3schools.com/css/css_background.asp">W3Schools for background color</a></li>
                 <li><a href="https://www.w3schools.com/html/html_css.asp">For a better understanding of CSS</a></li>
+            </ul>
+            <p><strong> (Lab05) Additional References</strong></p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" >MDN Flexbox Guide</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" >MDN CSS Grid Guide</a></li>
+                <li><a href="https://www.smashingmagazine.com/">Smashing Magazine (Purple Minimalist UI Design)</a></li>
+                <li><a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" >W3Schools - CSS Media Queries (my goat)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" >MDN HTML5 Semantic Elements</a></li>
+                <li><a href="https://roninoone.github.io/CSIT121stuff/practice/layouts" > Your JavaScript Example</a></li>
             </ul>
         </article>
     </main>
