@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Marvel Rivals Tier List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="tierlist.html">Tier List</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Contact & Feedback</h1>
+    <p>Have thoughts on the tier list? Let me know below!</p>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="opinion">Do you agree with the tier list?</label>
+        <select id="opinion" name="opinion">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="needs_changes">Needs changes</option>
+        </select>
+
+        <label>Which character should be moved up?</label>
+        <input type="checkbox" name="buff" value="jeff"> Jeff
+        <input type="checkbox" name="buff" value="bucky"> Bucky
+        <input type="checkbox" name="buff" value="hawkeye"> Hawkeye
+
+        <label>How annoying is Jeff?</label>
+        <input type="radio" name="jeff_annoyance" value="unbearable" required> Unbearable
+        <input type="radio" name="jeff_annoyance" value="annoying"> Annoying
+        <input type="radio" name="jeff_annoyance" value="fine"> Fine
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" maxlength="1600"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
