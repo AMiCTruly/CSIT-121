@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and Form Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #555;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #ddd;
+        }
+        tbody tr:hover {
+            background-color: #ccc;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Class Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Course Number</th>
+                <th>Course Name</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSIT 154</td>
+                <td>Database Concepts</td>
+                <td>Professor Sandra Tavegia</td>
+            </tr>
+            <tr>
+                <td>CSIT 121</td>
+                <td>Web Standards</td>
+                <td>Veronica Noone</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Feedback Form</h2>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comments">Comments (max 1600 chars):</label>
+        <textarea id="comments" name="comments" rows="5" maxlength="1600" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        <p>Created by Micheal A</p>
+        <p>Contact me: <a href="magbokere@example.com">magbokere@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
