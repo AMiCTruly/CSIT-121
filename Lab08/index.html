@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+        
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="image1.html">JPG</a>
+        <a href="image2.html">PNG</a>
+        <a href="image3.html">GIF</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <header>
+        <h1>Welcome to Micheal's Image Gallery</h1>
+    </header>
+    <main>
+        <h2>Exploring "Beautiful" Pieces of Art</h2>
+        <p>Welcome to my image gallery! Here, this is a showcase of images in various formats like JPG, WEPG, and GIF.
+        </p>
+        <p> In this showcase we will be going through to look at truely beautiful images. That will make you wonder "How is Micheal so good at this, he should be paided for such a marvelous work" I wanted to add images I truly wanted to add but I would say they are quite inappropriate. </p>
+        <p><strong> EnjoY!</strong></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Micheal's Image Gallery</p>
+    </footer>
+
+    <!-- JavaScript for responsive navbar -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

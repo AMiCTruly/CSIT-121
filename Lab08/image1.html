@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image 1 - JPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <!-- Top navigation bar -->
+   <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="image1.html">JPG</a>
+    <a href="image2.html">PNG</a>
+    <a href="image3.html">GIF</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<header>
+    <h1>JPG Example</h1>
+</header>
+    <main>
+        <img src="imagesforlabo4/Khonshu.jpg" alt="Scenic View">
+        <p><strong>Image Type:</strong> JPG</p>
+        <p><strong>Description:</strong> This is Khonshu, the god that is the source of Moon Knight's powers. Quite a bother he is if you ask me.</p>
+        <p><strong>Why I Chose It:</strong> I mainly thought showing an image of someone that is quite integral to Moon Knight being Moon Knight would be to show the source of his powers.</p>
+        <p><strong>Source:</strong> <a href="https://marvel.fandom.com/wiki/Khonshu_(Earth-199999)" target="_blank">Image Source</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Micheal's Image Gallery</p>
+    </footer>
+
+    <!-- JavaScript for responsive navbar -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
