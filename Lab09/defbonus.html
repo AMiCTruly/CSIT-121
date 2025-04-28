@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Directory</title>
+    <!-- Had to Change the name cus I cut the original file💀(it was too far gone)-->
+    <!-- Prettier CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f6fc;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            margin: 30px auto;
+            width: 90%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+            display: none;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #78b312;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        let dataLoaded = false; // Track if data is loaded
+
+        function loadXMLDoc() {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    empDetails(this);
+                }
+            };
+            xmlhttp.open("GET", "employee.xml", true);
+            xmlhttp.send();
+        }
+
+        function empDetails(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table = `
+                <tr>
+                    <th>First Name</th><th>Last Name</th><th>Title</th>
+                    <th>Division</th><th>Building</th><th>Room</th>
+                </tr>`;
+            let x = xmlDoc.getElementsByTagName("employee");
+
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("firstname")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("lastname")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("division")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("building")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("room")[0].childNodes[0].nodeValue + "</td></tr>";
+            }
+
+            document.getElementById("id").innerHTML = table;
+            document.getElementById("id").style.display = "table"; // Show the table
+            updateButtonText(); // Update button text
+        }
+
+        function toggleData() {
+            if (dataLoaded) {
+                document.getElementById("id").style.display = "none"; // Hide the table
+                dataLoaded = false;
+            } else {
+                loadXMLDoc(); // Load the employee data
+                dataLoaded = true;
+            }
+            updateButtonText(); // Update button text
+        }
+
+        function updateButtonText() {
+            const button = document.getElementById("toggleButton");
+            if (dataLoaded) {
+                button.textContent = "Close Employee Data";
+            } else {
+                button.textContent = "Get Employee Data";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Employee Directory</h1>
+    <button id="toggleButton" class="button" onclick="toggleData()">Get Employee Data</button>
+    <table id="id"></table>
+</body>
+</html>
