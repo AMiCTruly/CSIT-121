@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How is TTML IMSC1 Used?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Top Navigation Bar -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home |</a>
+    <a href="whatisit.html">What is this Web Standard |</a>
+    <a href="Whyisitimportant.html">Why it is important |</a>
+    <a href="Howitisused.html">How it is Used |</a>
+    <a href="Sources.html"> References</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <h1>How is TTML IMSC1 Used?</h1>
+  <p>
+    TTML IMSC1 is used to author and render subtitles and captions for internet-delivered media. 
+    It supports multiple text formatting features such as font size, alignment, positioning, 
+    and styling to ensure clarity and consistency in text display.
+  </p>
+  <h2>Example Usage</h2>
+  <pre>
+  &lt;tt xmlns="http://www.w3.org/ns/ttml"&gt;
+    &lt;head&gt;
+      &lt;styling&gt;
+        &lt;style xml:id="s1" tts:fontSize="12px"/&gt;
+      &lt;/styling&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div&gt;
+        &lt;p begin="00:00:01.000" end="00:00:04.000" style="s1"&gt;
+          Hello, world!
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/tt&gt;
+  </pre>
+  <p>
+    This example displays a subtitle reading “Hello, world!” from 1 to 4 seconds into a video.
+  </p>
+  <!-- The Scripty script -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>

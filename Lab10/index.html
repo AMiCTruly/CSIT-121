@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TTML IMSC1 - Learn About It</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation Bar cus why not -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home |</a>
+    <a href="whatisit.html">What is this Web Standard |</a>
+    <a href="Whyisitimportant.html">Why it is important |</a>
+    <a href="Howitisused.html">How it is Used |</a>
+    <a href="Sources.html"> References</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>Welcome to TTML IMSC1 Info Hub 🌍</h1>
+    <p>Click below to learn more about TTML IMSC1!</p>
+    <ul class="nav-list">
+      <li><a href="what-is-it.html">👉 What is it?</a></li>
+      <li><a href="why-important.html">💡 Why is it important?</a></li>
+      <li><a href="how-used.html">⚙️ How is it used?</a></li>
+      <li><a href="sources.html">📚 Sources</a></li>
+    </ul>
+  </div>
+  <footer>
+    <p>&copy; 2025 Micheal's Image Gallery</p>
+</footer>
+
+  <!-- The Scripty script -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>
