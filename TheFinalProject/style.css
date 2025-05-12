@@ -147,21 +147,38 @@ h1, h2, h3 {
   display: block;
   margin: 0 auto 20px;
   @media (max-width: 768px) {
-    .responsive-img {
+  .responsive-img {
     width: 100%;
-    }
-      nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .container img {
-      float: none;
-      display: block;
-      margin: 0 auto 20px;
-    }
-  
-    body::after {
-      display: none;
-    }
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
   }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 10px;
+    display: block;
+    font-size: 1.1em;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px 10px;
+    line-height: 1.4;
+  }
+
+  body::after {
+    display: none;
+  }
+}
